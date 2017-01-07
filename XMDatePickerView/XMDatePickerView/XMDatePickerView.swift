@@ -89,6 +89,11 @@ class XMDatePickerView: UIView {
     /// 确定按钮点击事件
     @IBAction func sureBtnClick() {
         dismiss()
+        /// 闭包回调结果
+        if self.dateBlock != nil {
+            let dateStr = formatter?.string(from: datePicker.date)
+            dateBlock!(dateStr ?? "")
+        }
     }
 }
 
