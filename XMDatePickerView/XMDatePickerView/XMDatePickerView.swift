@@ -24,6 +24,9 @@ class XMDatePickerView: UIView {
     /// 动画时间间隔
     let duration: Double = 0.3
     
+    /// 定义一个闭包,作为时间选择完成后的回调
+    var dateBlock:((String)->())?
+    
     /// 通过类方法,获取时间选择器对象
     ///
     /// - Returns: 从xib中返回自身视图
