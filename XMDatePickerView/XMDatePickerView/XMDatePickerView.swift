@@ -27,6 +27,25 @@ class XMDatePickerView: UIView {
     /// 定义一个闭包,作为时间选择完成后的回调
     var dateBlock:((String)->())?
     
+    var formatter: DateFormatter?
+    
+    
+    /// 设置日期的选择器的模式
+    var dateMode: UIDatePickerMode? {
+        didSet {
+            /// 设置日期选择器的模式,默认是时间选择器
+            datePicker.datePickerMode = dateMode ?? UIDatePickerMode.dateAndTime
+            
+            let ft = DateFormatter()
+            if dateMode == UIDatePickerMode.date {
+                ft.dateFormat = "yyyy-MM-dd"
+            } else if dateMode == UIDatePickerMode.dateAndTime {
+                ft.dateFormat = "yyyy-MM-dd HH:mm"
+            }
+            formatter = ft
+        }
+    }
+    
     /// 通过类方法,获取时间选择器对象
     ///
     /// - Returns: 从xib中返回自身视图
@@ -95,6 +114,7 @@ extension XMDatePickerView {
         }
     }
     
+    /// 展示
     func show() {
         parentView.alpha = 0
         parentView.transform = CGAffineTransform.init(scaleX: 0.5, y: 0.5)
@@ -104,12 +124,14 @@ extension XMDatePickerView {
         }
     }
     
+    /// 消失
     func dismiss() {
         UIView.animate(withDuration: duration, animations: {
             self.parentView.alpha = 0
             self.parentView.transform = CGAffineTransform.init(scaleX: 0.5, y: 0.5)
         }) { (_) in
-            self.parentView.transform = CGAffineTransform.init(scaleX: 1, y: 1)
+            /// 还原并从父视图中移除
+            self.parentView.transform = CGAffineTransform.identity
             self.removeFromSuperview()
         }
     }
