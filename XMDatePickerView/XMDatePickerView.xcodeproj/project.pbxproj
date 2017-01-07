@@ -12,6 +12,8 @@
 		9FC7D6BD1E20A87200CDF11C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC7D6BB1E20A87200CDF11C /* Main.storyboard */; };
 		9FC7D6BF1E20A87200CDF11C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC7D6BE1E20A87200CDF11C /* Assets.xcassets */; };
 		9FC7D6C21E20A87200CDF11C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC7D6C01E20A87200CDF11C /* LaunchScreen.storyboard */; };
+		9FC7D6CA1E20A94D00CDF11C /* XMDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC7D6C91E20A94D00CDF11C /* XMDatePickerView.swift */; };
+		9FC7D6CC1E20A95500CDF11C /* XMDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC7D6CB1E20A95500CDF11C /* XMDatePickerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		9FC7D6BE1E20A87200CDF11C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FC7D6C11E20A87200CDF11C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FC7D6C31E20A87200CDF11C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FC7D6C91E20A94D00CDF11C /* XMDatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMDatePickerView.swift; sourceTree = "<group>"; };
+		9FC7D6CB1E20A95500CDF11C /* XMDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMDatePickerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				9FC7D6B71E20A87200CDF11C /* AppDelegate.swift */,
 				9FC7D6B91E20A87200CDF11C /* ViewController.swift */,
+				9FC7D6C91E20A94D00CDF11C /* XMDatePickerView.swift */,
+				9FC7D6CB1E20A95500CDF11C /* XMDatePickerView.xib */,
 				9FC7D6BB1E20A87200CDF11C /* Main.storyboard */,
 				9FC7D6BE1E20A87200CDF11C /* Assets.xcassets */,
 				9FC7D6C01E20A87200CDF11C /* LaunchScreen.storyboard */,
@@ -124,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FC7D6C21E20A87200CDF11C /* LaunchScreen.storyboard in Resources */,
+				9FC7D6CC1E20A95500CDF11C /* XMDatePickerView.xib in Resources */,
 				9FC7D6BF1E20A87200CDF11C /* Assets.xcassets in Resources */,
 				9FC7D6BD1E20A87200CDF11C /* Main.storyboard in Resources */,
 			);
@@ -136,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FC7D6CA1E20A94D00CDF11C /* XMDatePickerView.swift in Sources */,
 				9FC7D6BA1E20A87200CDF11C /* ViewController.swift in Sources */,
 				9FC7D6B81E20A87200CDF11C /* AppDelegate.swift in Sources */,
 			);
