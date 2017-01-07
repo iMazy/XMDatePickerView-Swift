@@ -18,6 +18,9 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yh-la-4EM">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <connections>
+                        <action selector="backgroundBtnClick" destination="iN0-l3-epB" eventType="touchUpInside" id="cgR-rZ-pR2"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1Q-sR-CCV">
                     <rect key="frame" x="30" y="203" width="315" height="262"/>
@@ -32,10 +35,16 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFd-eT-rBK">
                             <rect key="frame" x="30" y="222" width="112.5" height="30"/>
                             <state key="normal" title="取消"/>
+                            <connections>
+                                <action selector="cancelBtnClick" destination="iN0-l3-epB" eventType="touchUpInside" id="QF1-ID-w9a"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pko-Nz-zo8">
                             <rect key="frame" x="173" y="222" width="112" height="30"/>
                             <state key="normal" title="确定"/>
+                            <connections>
+                                <action selector="sureBtnClick" destination="iN0-l3-epB" eventType="touchUpInside" id="53a-wd-0HY"/>
+                            </connections>
                         </button>
                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="avG-uv-jga">
                             <rect key="frame" x="5" y="5" width="305" height="201"/>
@@ -80,6 +89,13 @@
                 <constraint firstAttribute="bottom" secondItem="4yh-la-4EM" secondAttribute="bottom" id="t0p-eL-sJ7"/>
                 <constraint firstAttribute="trailing" secondItem="4yh-la-4EM" secondAttribute="trailing" id="t6Y-AY-ks1"/>
             </constraints>
+            <connections>
+                <outlet property="backgroundButton" destination="4yh-la-4EM" id="7vt-nC-VYG"/>
+                <outlet property="cancelButton" destination="DFd-eT-rBK" id="VAx-i8-hHq"/>
+                <outlet property="datePicker" destination="avG-uv-jga" id="fqD-Ge-QiL"/>
+                <outlet property="parentView" destination="C1Q-sR-CCV" id="Fn8-pE-7WB"/>
+                <outlet property="sureButton" destination="Pko-Nz-zo8" id="8YI-YQ-YRY"/>
+            </connections>
             <point key="canvasLocation" x="28" y="29"/>
         </view>
     </objects>
