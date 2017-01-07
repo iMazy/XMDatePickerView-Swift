@@ -5,7 +5,7 @@ A datePickerView create by swift, be packaged,more flexible than original.
 ***
 
 ###GIF示例:
-![image](https://github.com/Mazy-ma/XMDatePickerView_Swift/blob/master/XMDatePickerView/XMDatePickerView/QQ20170107-134741-HD.gif)
+![image](https://github.com/Mazy-ma/XMDatePickerView_Swift/blob/master/XMDatePickerView/XMDatePickerView/demo.gif)
 ***
 
 ###图片示例
