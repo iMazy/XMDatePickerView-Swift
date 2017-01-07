@@ -22,6 +22,13 @@ class XMDatePickerView: UIView {
     @IBOutlet weak var sureButton: UIButton!
     
     
+    /// 通过类方法,获取时间选择器对象
+    ///
+    /// - Returns: 从xib中返回自身视图
+    class func datePickerView()->XMDatePickerView {
+        return Bundle.main.loadNibNamed("XMDatePickerView", owner: nil, options: nil)?.first as! XMDatePickerView
+    }
+    
     
     /// 背景按钮点击事件
     @IBAction func backgroundBtnClick() {
