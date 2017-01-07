@@ -21,6 +21,8 @@ class XMDatePickerView: UIView {
     /// 确定按钮
     @IBOutlet weak var sureButton: UIButton!
     
+    /// 动画时间间隔
+    let duration: Double = 0.3
     
     /// 通过类方法,获取时间选择器对象
     ///
@@ -46,7 +48,7 @@ class XMDatePickerView: UIView {
         parentView.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         parentView.layer.shadowRadius = 5.0
         
-        /// 给取消/确定按钮添加边框
+        /// 给 取消/确定 按钮添加边框
         borderView(borderView: cancelButton)
         borderView(borderView: sureButton)
         
@@ -54,20 +56,27 @@ class XMDatePickerView: UIView {
     
     /// 背景按钮点击事件
     @IBAction func backgroundBtnClick() {
-        
+        dismiss()
     }
     
     /// 取消按钮点击事件
     @IBAction func cancelBtnClick() {
+        dismiss()
     }
     
     /// 确定按钮点击事件
     @IBAction func sureBtnClick() {
+        dismiss()
     }
 }
 
 
 extension XMDatePickerView {
+    
+    
+    /// 抽取视图设置边框方法
+    ///
+    /// - Parameter borderView: 需要设置边框的视图
     func borderView(borderView: UIView) {
         let color = UIColor.init(colorLiteralRed: 0, green: 174/255.0, blue: 240/255.0, alpha: 1)
         
@@ -80,6 +89,25 @@ extension XMDatePickerView {
             let btn = borderView as! UIButton
             btn .setTitleColor(color, for: .normal)
             
+        }
+    }
+    
+    func show() {
+        parentView.alpha = 0
+        parentView.transform = CGAffineTransform.init(scaleX: 0.5, y: 0.5)
+        UIView.animate(withDuration: duration) {
+            self.parentView.alpha = 1.0
+            self.parentView.transform = CGAffineTransform.init(scaleX: 1.0, y: 1.0)
+        }
+    }
+    
+    func dismiss() {
+        UIView.animate(withDuration: duration, animations: {
+            self.parentView.alpha = 0
+            self.parentView.transform = CGAffineTransform.init(scaleX: 0.5, y: 0.5)
+        }) { (_) in
+            self.parentView.transform = CGAffineTransform.init(scaleX: 1, y: 1)
+            self.removeFromSuperview()
         }
     }
 }
