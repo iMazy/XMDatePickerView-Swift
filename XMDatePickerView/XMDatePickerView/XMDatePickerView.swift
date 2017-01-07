@@ -62,7 +62,7 @@ class XMDatePickerView: UIView {
         backgroundColor = UIColor.init(colorLiteralRed: 0.16, green: 0.17, blue: 0.21, alpha: 0.3)
         
         /// 设置背景视图的属性--->圆角
-        parentView.layer.cornerRadius = 1
+        parentView.layer.cornerRadius = 10
         parentView.layer.masksToBounds = false
         /// 设置阴影
         parentView.layer.shadowOpacity = 1.0

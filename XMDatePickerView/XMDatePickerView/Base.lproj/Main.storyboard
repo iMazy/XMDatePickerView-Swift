@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZeW-hr-Zgi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--XMDatePickerView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XMDatePickerView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,73 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="点击选择日期" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5cK-2c-Ozu">
+                                <rect key="frame" x="50" y="147" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日期选择器" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjw-eS-g8w">
+                                <rect key="frame" x="50" y="124" width="76.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间选择器" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cs2-d1-ciV">
+                                <rect key="frame" x="50" y="227" width="76.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="点击选择时间" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9o9-KT-nmH">
+                                <rect key="frame" x="50" y="250" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tjw-eS-g8w" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="1UJ-XJ-Tsi"/>
+                            <constraint firstItem="cs2-d1-ciV" firstAttribute="top" secondItem="5cK-2c-Ozu" secondAttribute="bottom" constant="50" id="CHP-b6-Tnf"/>
+                            <constraint firstItem="9o9-KT-nmH" firstAttribute="trailing" secondItem="5cK-2c-Ozu" secondAttribute="trailing" id="Efv-pe-NCM"/>
+                            <constraint firstItem="5cK-2c-Ozu" firstAttribute="leading" secondItem="tjw-eS-g8w" secondAttribute="leading" id="HAk-r6-rJm"/>
+                            <constraint firstItem="5cK-2c-Ozu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="azd-sE-IIA"/>
+                            <constraint firstItem="tjw-eS-g8w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="cxX-4P-c6g"/>
+                            <constraint firstItem="9o9-KT-nmH" firstAttribute="leading" secondItem="5cK-2c-Ozu" secondAttribute="leading" id="pWv-Ke-geW"/>
+                            <constraint firstItem="9o9-KT-nmH" firstAttribute="top" secondItem="cs2-d1-ciV" secondAttribute="bottom" constant="5" id="qGj-dc-Uz5"/>
+                            <constraint firstItem="cs2-d1-ciV" firstAttribute="leading" secondItem="tjw-eS-g8w" secondAttribute="leading" id="s8u-M2-N4O"/>
+                            <constraint firstItem="5cK-2c-Ozu" firstAttribute="top" secondItem="tjw-eS-g8w" secondAttribute="bottom" constant="5" id="w41-D8-Tjl"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="XMDatePickerView" id="h1s-Fm-CGW"/>
+                    <connections>
+                        <outlet property="dateField" destination="5cK-2c-Ozu" id="wS0-Hu-irc"/>
+                        <outlet property="timeField" destination="9o9-KT-nmH" id="22K-Ok-63V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="957.60000000000002" y="80.50974512743629"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gtW-8L-SLB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZeW-hr-Zgi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bhq-FX-8vN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K3W-nQ-pN5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oal-JQ-CdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="82"/>
         </scene>
     </scenes>
 </document>
