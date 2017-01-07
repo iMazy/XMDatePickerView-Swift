@@ -17,6 +17,7 @@
 		9FDE954C1E20B9A9006F1759 /* 屏幕快照 2017-01-07 下午1.52.06.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE954A1E20B9A9006F1759 /* 屏幕快照 2017-01-07 下午1.52.06.png */; };
 		9FDE954D1E20B9A9006F1759 /* 屏幕快照 2017-01-07 下午1.51.35.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE954B1E20B9A9006F1759 /* 屏幕快照 2017-01-07 下午1.51.35.png */; };
 		9FDE954F1E20B9B6006F1759 /* QQ20170107-134741-HD.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE954E1E20B9B6006F1759 /* QQ20170107-134741-HD.gif */; };
+		9FDE95511E20BBDC006F1759 /* 333.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9FDE95501E20BBDC006F1759 /* 333.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9FDE954A1E20B9A9006F1759 /* 屏幕快照 2017-01-07 下午1.52.06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2017-01-07 下午1.52.06.png"; sourceTree = "<group>"; };
 		9FDE954B1E20B9A9006F1759 /* 屏幕快照 2017-01-07 下午1.51.35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2017-01-07 下午1.51.35.png"; sourceTree = "<group>"; };
 		9FDE954E1E20B9B6006F1759 /* QQ20170107-134741-HD.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "QQ20170107-134741-HD.gif"; sourceTree = "<group>"; };
+		9FDE95501E20BBDC006F1759 /* 333.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 333.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				9FDE954A1E20B9A9006F1759 /* 屏幕快照 2017-01-07 下午1.52.06.png */,
 				9FDE954B1E20B9A9006F1759 /* 屏幕快照 2017-01-07 下午1.51.35.png */,
 				9FDE954E1E20B9B6006F1759 /* QQ20170107-134741-HD.gif */,
+				9FDE95501E20BBDC006F1759 /* 333.gif */,
 				9FC7D6C01E20A87200CDF11C /* LaunchScreen.storyboard */,
 				9FC7D6C31E20A87200CDF11C /* Info.plist */,
 			);
@@ -142,6 +145,7 @@
 				9FC7D6C21E20A87200CDF11C /* LaunchScreen.storyboard in Resources */,
 				9FC7D6CC1E20A95500CDF11C /* XMDatePickerView.xib in Resources */,
 				9FC7D6BF1E20A87200CDF11C /* Assets.xcassets in Resources */,
+				9FDE95511E20BBDC006F1759 /* 333.gif in Resources */,
 				9FC7D6BD1E20A87200CDF11C /* Main.storyboard in Resources */,
 				9FDE954C1E20B9A9006F1759 /* 屏幕快照 2017-01-07 下午1.52.06.png in Resources */,
 				9FDE954F1E20B9B6006F1759 /* QQ20170107-134741-HD.gif in Resources */,
