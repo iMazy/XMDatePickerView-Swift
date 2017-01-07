@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,7 +15,72 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XMDatePickerView" customModule="XMDatePickerView" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yh-la-4EM">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1Q-sR-CCV">
+                    <rect key="frame" x="30" y="203" width="315" height="262"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWH-2I-VHd">
+                            <rect key="frame" x="0.0" y="211" width="315" height="0.5"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="Jj6-So-fiX"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFd-eT-rBK">
+                            <rect key="frame" x="30" y="222" width="112.5" height="30"/>
+                            <state key="normal" title="取消"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pko-Nz-zo8">
+                            <rect key="frame" x="173" y="222" width="112" height="30"/>
+                            <state key="normal" title="确定"/>
+                        </button>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="avG-uv-jga">
+                            <rect key="frame" x="5" y="5" width="305" height="201"/>
+                            <date key="date" timeIntervalSinceReferenceDate="505457307.02112502">
+                                <!--2017-01-07 04:48:27 +0000-->
+                            </date>
+                            <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                <!--1970-01-01 11:00:00 +0000-->
+                            </date>
+                            <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                <!--2037-12-31 11:00:00 +0000-->
+                            </date>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ZWH-2I-VHd" firstAttribute="top" secondItem="avG-uv-jga" secondAttribute="bottom" constant="5" id="1uf-e0-oHG"/>
+                        <constraint firstItem="Pko-Nz-zo8" firstAttribute="width" secondItem="DFd-eT-rBK" secondAttribute="width" id="4KM-Zo-KjU"/>
+                        <constraint firstAttribute="trailing" secondItem="Pko-Nz-zo8" secondAttribute="trailing" constant="30" id="4fh-Ot-B7J"/>
+                        <constraint firstItem="DFd-eT-rBK" firstAttribute="leading" secondItem="C1Q-sR-CCV" secondAttribute="leading" constant="30" id="4fw-Rw-n30"/>
+                        <constraint firstItem="Pko-Nz-zo8" firstAttribute="centerY" secondItem="DFd-eT-rBK" secondAttribute="centerY" id="7fn-px-bVN"/>
+                        <constraint firstItem="avG-uv-jga" firstAttribute="top" secondItem="C1Q-sR-CCV" secondAttribute="top" constant="5" id="BH1-z7-Gln"/>
+                        <constraint firstItem="ZWH-2I-VHd" firstAttribute="leading" secondItem="C1Q-sR-CCV" secondAttribute="leading" id="HpT-jG-iPU"/>
+                        <constraint firstAttribute="width" secondItem="C1Q-sR-CCV" secondAttribute="height" multiplier="1.2" id="Qku-y8-9fg"/>
+                        <constraint firstAttribute="trailing" secondItem="ZWH-2I-VHd" secondAttribute="trailing" id="Scz-Bm-iHJ"/>
+                        <constraint firstItem="Pko-Nz-zo8" firstAttribute="leading" secondItem="DFd-eT-rBK" secondAttribute="trailing" constant="30" id="WAn-EU-jyA"/>
+                        <constraint firstItem="Pko-Nz-zo8" firstAttribute="top" secondItem="ZWH-2I-VHd" secondAttribute="bottom" constant="10" id="cp7-yW-Q3I"/>
+                        <constraint firstAttribute="bottom" secondItem="DFd-eT-rBK" secondAttribute="bottom" constant="10" id="dka-7G-22h"/>
+                        <constraint firstItem="avG-uv-jga" firstAttribute="leading" secondItem="C1Q-sR-CCV" secondAttribute="leading" constant="5" id="fnB-4N-ehJ"/>
+                        <constraint firstAttribute="trailing" secondItem="avG-uv-jga" secondAttribute="trailing" constant="5" id="idg-hW-a1a"/>
+                        <constraint firstAttribute="bottom" secondItem="Pko-Nz-zo8" secondAttribute="bottom" constant="10" id="lZ0-Hi-b8u"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4yh-la-4EM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0CJ-Vg-7He"/>
+                <constraint firstItem="C1Q-sR-CCV" firstAttribute="centerY" secondItem="4yh-la-4EM" secondAttribute="centerY" id="KMc-nZ-2Zu"/>
+                <constraint firstAttribute="trailing" secondItem="C1Q-sR-CCV" secondAttribute="trailing" constant="30" id="OTc-Do-xHl"/>
+                <constraint firstItem="4yh-la-4EM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gyW-Dd-Ou4"/>
+                <constraint firstItem="C1Q-sR-CCV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="kFF-yN-6rC"/>
+                <constraint firstAttribute="bottom" secondItem="4yh-la-4EM" secondAttribute="bottom" id="t0p-eL-sJ7"/>
+                <constraint firstAttribute="trailing" secondItem="4yh-la-4EM" secondAttribute="trailing" id="t6Y-AY-ks1"/>
+            </constraints>
+            <point key="canvasLocation" x="28" y="29"/>
         </view>
     </objects>
 </document>
