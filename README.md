@@ -1,4 +1,4 @@
-# XMDatePickerView_Swift
+# XMDatePickerView-Swift
 A datePickerView create by swift, be packaged,more flexible than original.
 
 
